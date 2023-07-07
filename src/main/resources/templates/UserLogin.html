@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Login</title>
+<style type="text/css">
+body {
+  font-family: sans-serif;
+  background-color: rgb(255, 255, 255);
+  margin-top: 200px;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: rgb(225, 220, 220);
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+<h1>Login</h1>
+<form action="/login" method="post">
+<div class="alert alert-primary text-center" style="color:red" role="alert">
+[[${error}]]
+</div>
+<!--  <p style="color:red">[[${error}]]</p> -->
+<input type="text" placeholder="Enter Username" name="username" required>
+<label>Password : </label>
+<input type="password" placeholder="Enter Password" name="password" required>
+<button type="submit">Login</button>
+</form>
+</div>
+
+</body>
+</html>
